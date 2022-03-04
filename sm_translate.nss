@@ -1,10 +1,5 @@
 #include "x0_i0_stringlib"
 
-string CombineStrings(string sStr1, string sStr2)
-{
-  return sStr1 + " " + sStr2;
-}
-
 string ReverseString(string sString)
 {
   string sReversedString = "";
@@ -69,11 +64,8 @@ void main()
 {
   string sText = "Moradin, the Dwarffather, is the dwarven lawful good chief deity. He represents the dwarven strength and force of will. He inspires dwarven inventions, seeks to improve the dwarven and encourage their good nature, intelligence, and harmonious existence with other good races while battling their pride and isolationist tendencies.";
   int nFluency = 50;
-
   int nTokens = GetNumberTokens(sText, " ");
-
   int i;
-
   string sTranslatedText = "";
 
   for (i = 0; i < nTokens; i++)
@@ -83,11 +75,11 @@ void main()
 
     if (nRandom < nFluency)
     {
-      sTranslatedText = CombineStrings(sTranslatedText, sWord);
+      sTranslatedText = sTranslatedText + " " + sWord;
     }
     else
     {
-      sTranslatedText = CombineStrings(sTranslatedText, JumbleWord(sWord));
+      sTranslatedText = sTranslatedText + " " + JumbleWord(sWord);
     }
   }
 
