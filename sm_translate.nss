@@ -28,6 +28,7 @@ string CapitalizeLastLetter(string sWord)
 
   string sHead = GetStringLeft(sWord, nWordLength - 1);
   string sTail = GetStringRight(sWord, 1);
+
   return sHead + GetStringUpperCase(sTail);
 }
 
@@ -57,7 +58,7 @@ string JumbleWord(string sWord)
     ActionSpeakString(sHead);
   }
 
-  return ReverseString(sHead) + sTail;
+  return "<c¦Iÿ>" + ReverseString(sHead) + sTail + "</c>";
 }
 
 void main()
