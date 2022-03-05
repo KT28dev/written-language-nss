@@ -55,7 +55,6 @@ string JumbleWord(string sWord)
   if (StartsWithCapital(sWord))
   {
     sHead = LowercaseFirstLetter(CapitalizeLastLetter(sHead));
-    ActionSpeakString(sHead);
   }
 
   return "<c¦Iÿ>" + ReverseString(sHead) + sTail + "</c>";
@@ -64,7 +63,7 @@ string JumbleWord(string sWord)
 void main()
 {
   string sText = "Moradin, the Dwarffather, is the dwarven lawful good chief deity. He represents the dwarven strength and force of will. He inspires dwarven inventions, seeks to improve the dwarven and encourage their good nature, intelligence, and harmonious existence with other good races while battling their pride and isolationist tendencies.";
-  int nFluency = 50;
+  int nFluency = StringToInt(GetPCChatMessage());
   int nTokens = GetNumberTokens(sText, " ");
   int i;
   string sTranslatedText = "";
